@@ -1,7 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;700&family=Righteous&display=swap');
 * {
     box-sizing: border-box;
+    font-family: 'Recursive', sans-serif;
   }
 
+h1{
+  font-family: 'Righteous', cursive;
+}
+
+header span {
+  font-family: 'Righteous', cursive;
+}
+
+.footer p {
+  font-family: 'Recursive', sans-serif;
+}
 body {
   width: 100%;
   height: 100%;
@@ -36,7 +49,6 @@ h1 {
 .botao-inicio{
   width: 246px;
   height: 54px;
-  /* display: flex; */
   position: fixed;
   bottom: 218px;
   justify-content: center;
@@ -77,11 +89,24 @@ header img{
   justify-content: center;
   align-items: center;
   font-size: 18px;
+}
+
+.footer.finalizado{
+  height: 170px;
   
 }
 
+.footer.finalizado p{
+  margin-top: 10px;  
+}
+
+.footer.finalizado .mensagem{
+  display: flex;
+  align-items: center;
+}
+
 .cartas{
-  padding-bottom: 95px;
+  padding-bottom: 180px;
 }
 
 .carta {
@@ -101,9 +126,9 @@ header img{
 }
 
 .carta.selecionada{
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 299px;
   height: 131px;
   padding: 18px 15px;
   background-color: #FFFFD5;
@@ -126,8 +151,8 @@ ion-icon{
 
 .botoes{
   display: flex;
-  margin-left: 7px;
-  justify-content: space-between;
+  width: 270px;
+  justify-content: space-evenly;
 }
 
 .nao-lembrei{
@@ -173,3 +198,44 @@ ion-icon{
   text-decoration-line: line-through;
   color: #2FBE34;
 }
+
+@media (min-width: 700px){
+  .carta {
+    width: 560px;
+    height: 65px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 0 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+  .carta.selecionada{
+    flex-direction: column;
+    font-size: 24px;
+  }
+  .botoes{
+    display: flex;
+    justify-content: space-evenly;
+    width: 560px;
+  }
+
+  header{
+    font-size: 64px;
+    
+  }
+  .footer{
+    font-size: 28px;
+  }
+  header img{
+    width: 86px;
+    height: 100px;
+  }
+}
+
+  
